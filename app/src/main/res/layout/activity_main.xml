@@ -8,6 +8,7 @@
 
 
     <FrameLayout
+        android:id="@+id/main_pager_fl"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
@@ -15,40 +16,61 @@
     </FrameLayout>
 
     <RadioGroup
+        android:id="@+id/main_pager_rg"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:background="ffffff"
+        android:background="#ffffff"
         android:orientation="horizontal">
 
         <RadioButton
+            android:id="@+id/main_pager_rb_home"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/main_pager_navigation_hame_selector"
+            android:textColor="@drawable/main_pager_navigation_textcolor_selector"
             android:text="首页"
             android:gravity="center"/>
         <RadioButton
+            android:id="@+id/main_pager_rb_classify"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_weight="1"
-            android:text="首页"
+            android:button="@null"
+            android:drawableTop="@drawable/main_pager_navigation_classify_selector"
+            android:textColor="@drawable/main_pager_navigation_textcolor_selector"
+            android:text="分类"
             android:gravity="center"/>
         <RadioButton
+            android:id="@+id/main_pager_rb_speciel"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_weight="1"
-            android:text="首页"
+            android:button="@null"
+            android:drawableTop="@drawable/main_pager_navigation_special_selector"
+            android:textColor="@drawable/main_pager_navigation_textcolor_selector"
+            android:text="专题"
             android:gravity="center"/>
         <RadioButton
+            android:id="@+id/main_pager_rb_shopping"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_weight="1"
-            android:text="首页"
+            android:button="@null"
+            android:drawableTop="@drawable/main_pager_navigation_shopping_selector"
+            android:textColor="@drawable/main_pager_navigation_textcolor_selector"
+            android:text="购物车"
             android:gravity="center"/>
         <RadioButton
+            android:id="@+id/main_pager_rb_my"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_weight="1"
-            android:text="首页"
+            android:button="@null"
+            android:drawableTop="@drawable/main_pager_navigation_my_selector"
+            android:textColor="@drawable/main_pager_navigation_textcolor_selector2"
+            android:text="我的"
             android:gravity="center"/>
 
     </RadioGroup>
