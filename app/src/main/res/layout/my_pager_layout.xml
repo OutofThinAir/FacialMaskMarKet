@@ -5,9 +5,10 @@
 
 <RelativeLayout
     android:layout_width="match_parent"
-    android:layout_height="200dp">
+    android:layout_height="230dp">
 
     <ImageButton
+        android:id="@+id/my_pager_ib_log"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@mipmap/ic_launcher"
@@ -16,32 +17,57 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:layout_height="55dp"
         android:orientation="horizontal"
-        android:layout_alignParentBottom="true">
-        <ImageButton
+        android:layout_alignParentBottom="true"
+        android:background="#cfcfcf">
+        <TextView
+            android:id="@+id/my_pager_tv_dfk"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@mipmap/ic_launcher"/>
+           android:text="代付款"
+            android:textSize="20sp"
+            android:drawableTop="@mipmap/my_dai_fu_kuai"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/my_pager_tv_dfh"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="代发货"
+            android:textSize="20sp"
+            android:drawableTop="@mipmap/my_dai_fa_huo"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/my_pager_tv_dsh"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="代收货"
+            android:textSize="20sp"
+            android:drawableTop="@mipmap/my_dai_shou_huo"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/my_pager_tv_dpj"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="代评价"
+            android:textSize="20sp"
+            android:drawableTop="@mipmap/my_dai_ping_jia"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/my_pager_tv_tuk"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="退款"
+            android:textSize="20sp"
+            android:drawableTop="@mipmap/my_tui_kuai"
+            android:gravity="center"/>
 
-        <ImageButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/ic_launcher"/>
 
-        <ImageButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/ic_launcher"/>
-
-        <ImageButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/ic_launcher"/>
     </LinearLayout>
 </RelativeLayout>
 
@@ -50,6 +76,9 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:dividerHeight="10dp"
+        android:divider="#cfcfcf"
+        android:layout_marginTop="20dp"
         >
 
     </ListView>
