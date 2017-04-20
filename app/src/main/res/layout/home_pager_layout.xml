@@ -5,6 +5,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -41,6 +50,149 @@
     <com.youth.banner.Banner
         android:id="@+id/home_pager_banner"
         android:layout_width="match_parent"
-        android:layout_height="170dp"></com.youth.banner.Banner>
+        android:layout_height="170dp">
+
+    </com.youth.banner.Banner>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/home_pager_hqd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="每日签到"
+                android:layout_gravity="center"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/home_pager_hjf"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="积分商城"
+                android:layout_gravity="center"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/home_pager_hdh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="兑换专区"
+                android:layout_gravity="center"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/home_pager_hcx"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="真伪查询"
+                android:layout_gravity="center"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="--本周热销--"
+           android:textSize="20sp"
+           android:layout_gravity="center"/>
+
+            <com.huamei.facialmaskmarket.view.MyRecyclerView
+                android:id="@+id/home_pager_rcv01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </com.huamei.facialmaskmarket.view.MyRecyclerView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--优惠活动--"
+                android:textSize="20sp"
+                android:layout_gravity="center"/>
+
+            <com.huamei.facialmaskmarket.view.MyRecyclerView
+                android:id="@+id/home_pager_rcv02"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </com.huamei.facialmaskmarket.view.MyRecyclerView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--热门专题--"
+                android:textSize="20sp"
+                android:layout_gravity="center"/>
+
+            <ImageView
+                android:id="@+id/home_pager_rimage"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:scaleType="fitXY"
+                />
+            <com.huamei.facialmaskmarket.view.MyRecyclerView
+                android:id="@+id/home_pager_rcv03"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.huamei.facialmaskmarket.view.MyRecyclerView>
+
+
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

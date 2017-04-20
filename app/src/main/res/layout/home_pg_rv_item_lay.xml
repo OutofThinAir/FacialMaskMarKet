@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="170dp"
+    android:layout_height="250dp"
+
+    >
+    <LinearLayout
+        android:layout_width="150dp"
+        android:layout_height="230dp"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:background="@drawable/rv_item_border">
+        <ImageView
+            android:id="@+id/home_pg_rv_iamge"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            />
+        <TextView
+            android:id="@+id/home_pg_rv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="dsfafadsfs"
+            android:textSize="15sp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/home_pg_rv_pager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="69元"
+            android:layout_gravity="center"
+            android:textColor="#ED1C24"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

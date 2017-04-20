@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+   >
 
     <ScrollView
         android:layout_width="match_parent"
@@ -17,122 +18,156 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:background="#EFE4B0">
 
                 <ImageView
-                    android:layout_width="150dp"
+                    android:id="@+id/classify_pager_mm"
+                    android:layout_width="0dp"
                     android:layout_height="300dp"
+                    android:layout_weight="1.5"
                     android:src="@mipmap/classify_facial_mask" />
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="100dp"
+                        android:id="@+id/classify_pager_rfs"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
                         android:src="@mipmap/classify_emollient_water" />
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="100dp"
+                        android:id="@+id/classify_pager_jmr"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
                         android:src="@mipmap/classify_facial_cleanser" />
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="100dp"
+                        android:id="@+id/classify_pager_shtz"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
                         android:src="@mipmap/classify_kit" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="100dp"
+                        android:id="@+id/classify_pager_rfr"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
                         android:src="@mipmap/classify_body_lotion" />
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="100dp"
+                        android:id="@+id/classify_pager_qt"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
                         android:src="@mipmap/classify_other" />
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="100dp"
+                        android:id="@+id/classify_pager_nszy"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
                         android:src="@mipmap/classify_man" />
                 </LinearLayout>
 
             </LinearLayout>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="---按功效---"
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:background="#EFE4B0"
+                android:gravity="center"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="美丽从选对产品开始"
-                android:textSize="15dp" />
+                android:textSize="15dp"
+                android:gravity="center"
+                android:background="#EFE4B0"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:background="#EFE4B0">
 
                 <ImageView
-                    android:layout_width="wrap_content"
+                    android:id="@+id/classify_pager_bsbs"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:scaleType="fitXY"
                     android:src="@mipmap/classify_hydrating" />
 
                 <ImageView
-                    android:layout_width="wrap_content"
+                    android:id="@+id/classify_pager_shxf"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:scaleType="fitXY"
                     android:src="@mipmap/classify_soothing" />
 
                 <ImageView
-                    android:layout_width="wrap_content"
+                    android:id="@+id/classify_pager_kyqd"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:scaleType="fitXY"
                     android:src="@mipmap/classify_control_oil" />
 
                 <ImageView
-                    android:layout_width="wrap_content"
+                    android:id="@+id/classify_pager_mbtl"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:scaleType="fitXY"
                     android:src="@mipmap/classify_whitening" />
 
                 <ImageView
-                    android:layout_width="wrap_content"
+                    android:id="@+id/classify_pager_jzkz"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:scaleType="fitXY"
                     android:src="@mipmap/classify_firming" />
             </LinearLayout>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="-- 按肤质 --"
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:gravity="center"
+                android:background="#EFE4B0"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="适合自己的才是最好的"
-                android:textSize="15dp" />
+                android:textSize="15dp"
+                android:background="#EFE4B0"
+                android:gravity="center"/>
 
 
             <LinearLayout
@@ -140,9 +175,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                android:padding="5dp">
+                android:padding="5dp"
+                android:background="#EFE4B0">
 
                 <Button
+                    android:id="@+id/classify_pager_hhxfz"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -154,6 +191,7 @@
                     android:layout_width="5dp"
                     android:layout_height="wrap_content"></View>
                 <Button
+                    android:id="@+id/classify_pager_zxzfz"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -165,9 +203,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="5dp">
+                android:padding="5dp"
+                android:background="#EFE4B0">
 
                 <Button
+
+                    android:id="@+id/classify_pager_gzfz"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -178,6 +219,7 @@
     android:layout_height="wrap_content"></View>
 
                 <Button
+                    android:id="@+id/classify_pager_yzfz"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -189,9 +231,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="5dp">
+                android:padding="5dp"
+                android:background="#EFE4B0">
 
                 <Button
+                    android:id="@+id/classify_pager_ddfz"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -201,6 +245,7 @@
                     android:layout_width="5dp"
                     android:layout_height="wrap_content"></View>
                 <Button
+                    android:id="@+id/classify_pager_mgfz"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -209,17 +254,18 @@
             </LinearLayout>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="-- 明星产品 --"
-                android:textSize="25dp" />
+                android:textSize="25dp"
+                android:gravity="center"
+                android:background="#EFE4B0"/>
 
-            <GridView
-                android:id="@+id/fenlei_gv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:numColumns="2"></GridView>
+           <com.huamei.facialmaskmarket.view.MyRecyclerView
+               android:id="@+id/classify_pager_rv"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"></com.huamei.facialmaskmarket.view.MyRecyclerView>
         </LinearLayout>
 
 
