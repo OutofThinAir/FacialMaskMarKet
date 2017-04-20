@@ -1,6 +1,7 @@
 package com.huamei.facialmaskmarket.fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -23,6 +24,7 @@ import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
 import com.huamei.facialmaskmarket.R;
+import com.huamei.facialmaskmarket.activity.MinuteActivity;
 import com.huamei.facialmaskmarket.adapter.HomeRvAdapter;
 import com.huamei.facialmaskmarket.adapter.HomeRvAdapter02;
 import com.huamei.facialmaskmarket.adapter.HomeRvAdapter03;
@@ -222,6 +224,16 @@ public class HomeFragment extends Fragment {
                         HomeRvAdapter adapter = new HomeRvAdapter(getActivity(),list3);
                         rcv03.setAdapter(adapter);
                         adapter.notifyDataSetChanged();
+
+                        //rcv03条目点击事件
+                        adapter.setOnItemLongClickListener(new HomeRvAdapter.OnItemLongClickListener() {
+                            @Override
+                            public void onItemLongClick(View view, int position) {
+                                Intent intent = new Intent(getActivity(), MinuteActivity.class);
+                                intent.putExtra("id",list3.get(position).getId());
+                                startActivity(intent);
+                            }
+                        });
 
                     }
                 });

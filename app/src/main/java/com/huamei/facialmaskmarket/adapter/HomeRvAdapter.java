@@ -24,9 +24,10 @@ import java.util.ArrayList;
 public class HomeRvAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private Context context;
     private ArrayList<HomeDataBean.DataBean.SubjectsBean.GoodsListBean> list;
-    private AdapterView.OnItemClickListener onItemClickListener;
-   private AdapterView.OnItemLongClickListener onItemLongClickListener;
+
    private  ArrayList<Integer> mHeights;
+    private OnItemClickListener onItemClickListener;
+    private OnItemLongClickListener onItemLongClickListener;
 
 
     public HomeRvAdapter(Context context, ArrayList<HomeDataBean.DataBean.SubjectsBean.GoodsListBean> list) {
@@ -39,7 +40,30 @@ public class HomeRvAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         //初始化布局
         View view = LayoutInflater.from(context).inflate(R.layout.home_pg_rv_item_lay02,parent,false);
-        MyViewHolder holder = new MyViewHolder(view);
+        final MyViewHolder holder = new MyViewHolder(view);
+
+        //自定义的条目点击事件
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //获得条目的position
+                final int position = holder.getLayoutPosition();
+                onItemClickListener.onItemClick(v,position);
+            }
+        });
+
+        //自定义长按事件
+        view.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                //获得条目的position
+                final int position = holder.getLayoutPosition();
+                onItemLongClickListener.onItemLongClick(v,position);
+                return true;
+            }
+        });
+
+
         return holder;
     }
 
@@ -95,4 +119,24 @@ public class HomeRvAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
             mHeights.add( (int) (100 + Math.random() * 300));
         }
     }
+
+    //自定义监听
+    public interface OnItemClickListener{
+       void onItemClick(View view,int position);
+    }
+
+    public interface OnItemLongClickListener{
+        void onItemLongClick(View view,int position);
+
+    }
+
+    //对外调用接口的方法
+    public  void setOnItemClickListener(OnItemClickListener onItemClickListener){
+        this.onItemClickListener=onItemClickListener;
+    }
+
+    public  void setOnItemLongClickListener(OnItemLongClickListener onItemLongClickListener){
+        this.onItemLongClickListener=onItemLongClickListener;
+    }
+
 }

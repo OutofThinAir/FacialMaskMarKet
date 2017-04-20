@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/minute_pager_vp"
+        android:layout_width="match_parent"
+        android:layout_height="180dp">
+
+    </android.support.v4.view.ViewPager>
+
+    <TextView
+        android:id="@+id/minute_pager_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/minute_pager_vp"
+        android:layout_marginTop="5dp"
+        android:text="商品名称"
+        android:textSize="20sp"
+        android:gravity="center_vertical"/>
+
+    <TextView
+        android:id="@+id/minute_pager_price"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/minute_pager_title"
+        android:layout_marginTop="5dp"
+        android:text="69"
+        android:textSize="20sp"
+        android:gravity="center_vertical"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@+id/minute_pager_add_shoppcar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#E22018"
+            android:text="加入购物车"
+            android:textSize="25sp"/>
+        <Button
+            android:id="@+id/minute_pager_buy"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#73D321"
+            android:text="立即购买"
+            android:textSize="25sp"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
