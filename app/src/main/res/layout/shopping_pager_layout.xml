@@ -5,10 +5,50 @@
 
     <com.liaoinstan.springview.widget.SpringView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="0dp"
+        android:layout_weight="1">
         <ListView
             android:id="@+id/shop_pager_list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"></ListView>
     </com.liaoinstan.springview.widget.SpringView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+
+        >
+
+        <CheckBox
+            android:id="@+id/shop_car_quanxuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/chick_select"
+            android:text="全选"
+            android:layout_marginLeft="10dp"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/shop_car_zongja"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="$200"
+           android:layout_centerVertical="true"
+            android:textSize="30sp"
+            />
+        <TextView
+            android:id="@+id/shop_car_jiesuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="结算"
+            android:layout_centerVertical="true"
+            android:textSize="30sp"
+            android:layout_toLeftOf="@id/shop_car_zongja"
+            android:layout_marginRight="20dp"
+
+            />
+
+    </RelativeLayout>
 </LinearLayout>

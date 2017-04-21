@@ -226,9 +226,9 @@ public class HomeFragment extends Fragment {
                         adapter.notifyDataSetChanged();
 
                         //rcv03条目点击事件
-                        adapter.setOnItemLongClickListener(new HomeRvAdapter.OnItemLongClickListener() {
+                        adapter.setOnItemClickListener(new HomeRvAdapter.OnItemClickListener() {
                             @Override
-                            public void onItemLongClick(View view, int position) {
+                            public void onItemClick(View view, int position) {
                                 Intent intent = new Intent(getActivity(), MinuteActivity.class);
                                 intent.putExtra("id",list3.get(position).getId());
                                 startActivity(intent);

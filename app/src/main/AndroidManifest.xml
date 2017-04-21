@@ -17,6 +17,8 @@
         </activity>
         <activity android:name=".activity.ClassifyMinuteActivity"></activity>
         <activity android:name=".activity.MinuteActivity"></activity>
+        <activity android:name=".activity.LoginActivity"></activity>
+        <activity android:name=".activity.RegisterActivity"></activity>
     </application>
 
 </manifest>

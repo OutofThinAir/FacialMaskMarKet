@@ -1,5 +1,6 @@
 package com.huamei.facialmaskmarket.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -13,6 +14,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.huamei.facialmaskmarket.R;
+import com.huamei.facialmaskmarket.activity.LoginActivity;
 import com.huamei.facialmaskmarket.bean.MyPagerBean;
 
 import org.w3c.dom.Text;
@@ -25,10 +27,11 @@ import java.util.ArrayList;
  * Data:2017/4/12.
  */
 
-public class MyFragment extends Fragment {
+public class MyFragment extends Fragment implements View.OnClickListener{
 
     private ArrayList<MyPagerBean> list;
     private ListView listView;
+    private ImageButton ib_log;
 
     @Nullable
     @Override
@@ -68,14 +71,25 @@ public class MyFragment extends Fragment {
 
     //初始化控件
     private void initView(View view){
-        ImageButton ib_log= (ImageButton) view.findViewById(R.id.my_pager_ib_log);
+        ib_log = (ImageButton) view.findViewById(R.id.my_pager_ib_log);
         TextView tv_dfk = (TextView) view.findViewById(R.id.my_pager_tv_dfk);
         TextView tv_dfh = (TextView) view.findViewById(R.id.my_pager_tv_dfh);
         TextView tv_dsh = (TextView) view.findViewById(R.id.my_pager_tv_dsh);
         TextView tv_dpj = (TextView) view.findViewById(R.id.my_pager_tv_dpj);
         TextView tv_tuk = (TextView) view.findViewById(R.id.my_pager_tv_tuk);
         listView = (ListView) view.findViewById(R.id.my_pager_list);
+        ib_log.setOnClickListener(this);
 
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.my_pager_ib_log:
+                Intent intent = new Intent(getActivity(), LoginActivity.class);
+                startActivity(intent);
+                break;
+        }
     }
 
 
