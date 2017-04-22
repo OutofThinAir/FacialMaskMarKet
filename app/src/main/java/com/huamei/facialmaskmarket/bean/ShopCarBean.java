@@ -53,11 +53,12 @@ public class ShopCarBean {
         private int id;
         private String name;
         private String pic;
-        private int price;
+        private double price;
         private int productID;
         private int repertory;
         private int sizeID;
         private int userID;
+        private boolean flag;
 
         public int getColorID() {
             return colorID;
@@ -99,11 +100,11 @@ public class ShopCarBean {
             this.pic = pic;
         }
 
-        public int getPrice() {
+        public double getPrice() {
             return price;
         }
 
-        public void setPrice(int price) {
+        public void setPrice(double price) {
             this.price = price;
         }
 
@@ -137,6 +138,14 @@ public class ShopCarBean {
 
         public void setUserID(int userID) {
             this.userID = userID;
+        }
+
+        public boolean isFlag() {
+            return flag;
+        }
+
+        public void setFlag(boolean flag) {
+            this.flag = flag;
         }
     }
 }

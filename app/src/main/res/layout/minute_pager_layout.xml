@@ -6,7 +6,7 @@
     <android.support.v4.view.ViewPager
         android:id="@+id/minute_pager_vp"
         android:layout_width="match_parent"
-        android:layout_height="180dp">
+        android:layout_height="230dp">
 
     </android.support.v4.view.ViewPager>
 
@@ -37,15 +37,19 @@
         <Button
             android:id="@+id/minute_pager_add_shoppcar"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="#E22018"
             android:text="加入购物车"
-            android:textSize="25sp"/>
+            android:textSize="25sp"
+           />
+        <View
+            android:layout_width="5dp"
+            android:layout_height="match_parent"></View>
         <Button
             android:id="@+id/minute_pager_buy"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="#73D321"
             android:text="立即购买"

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+   <android.support.v4.widget.DrawerLayout
+       android:layout_width="match_parent"
+       android:layout_height="150dp"
+       >
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="horizontal">
+
+           <CheckBox
+               android:id="@+id/shop_car_it_ch"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:button="@drawable/chick_select"
+              android:layout_gravity="center_vertical"
+               android:layout_marginLeft="10dp"
+               />
+           <ImageView
+               android:id="@+id/shop_car_it_im"
+               android:layout_width="120dp"
+               android:layout_height="match_parent"
+               android:layout_marginLeft="20dp"/>
+
+           <RelativeLayout
+
+               android:layout_width="0dp"
+               android:layout_height="match_parent"
+               android:layout_weight="1"
+               android:layout_marginLeft="10dp"
+               >
+               <TextView
+                   android:id="@+id/shop_car_it_title"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="title"
+                   android:textSize="25sp"
+                   android:layout_marginLeft="10dp"
+                   />
+               <TextView
+                   android:id="@+id/shop_car_it_price"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="price"
+                   android:textSize="25sp"
+                   android:layout_marginLeft="10dp"
+                   android:layout_below="@id/shop_car_it_title"
+                   android:layout_marginTop="20dp"
+                   />
+
+           </RelativeLayout>
+       </LinearLayout>
+       <LinearLayout
+           android:layout_width="100dp"
+           android:layout_height="match_parent"
+           android:background="#E22018"
+           android:layout_gravity="right"
+           >
+              <TextView
+                  android:id="@+id/shop_car_it_del"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:text="删除"
+                  android:textSize="20sp"
+                  android:gravity="center"/>
+       </LinearLayout>
+
+   </android.support.v4.widget.DrawerLayout>
+
+</LinearLayout>
