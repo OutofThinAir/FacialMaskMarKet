@@ -1,6 +1,8 @@
 package com.huamei.facialmaskmarket.fragment;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -12,6 +14,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.huamei.facialmaskmarket.R;
 import com.huamei.facialmaskmarket.activity.LoginActivity;
@@ -32,6 +35,7 @@ public class MyFragment extends Fragment implements View.OnClickListener{
     private ArrayList<MyPagerBean> list;
     private ListView listView;
     private ImageButton ib_log;
+    private TextView uname;
 
     @Nullable
     @Override
@@ -66,12 +70,20 @@ public class MyFragment extends Fragment implements View.OnClickListener{
         MyAdapter adapter = new MyAdapter();
         listView.setAdapter(adapter);
 
+        //获得登录状态和用户名
+        SharedPreferences pre = getActivity().getSharedPreferences("cofig", Context.MODE_PRIVATE);
+        int uid = pre.getInt("uid", -1);
+        if (uid!=-1){
+            uname.setText(pre.getString("uname","登录"));
+        }
+
 
     }
 
     //初始化控件
     private void initView(View view){
         ib_log = (ImageButton) view.findViewById(R.id.my_pager_ib_log);
+        uname = (TextView) view.findViewById(R.id.my_pager_ib_uname);
         TextView tv_dfk = (TextView) view.findViewById(R.id.my_pager_tv_dfk);
         TextView tv_dfh = (TextView) view.findViewById(R.id.my_pager_tv_dfh);
         TextView tv_dsh = (TextView) view.findViewById(R.id.my_pager_tv_dsh);
@@ -86,8 +98,14 @@ public class MyFragment extends Fragment implements View.OnClickListener{
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.my_pager_ib_log:
-                Intent intent = new Intent(getActivity(), LoginActivity.class);
-                startActivity(intent);
+                int uid = getActivity().getSharedPreferences("cofig",Context.MODE_PRIVATE).getInt("uid",-1);
+                if (uid!=-1){
+                    Toast.makeText(getActivity(), "你已经登录了", Toast.LENGTH_SHORT).show();
+                }else{
+                    Intent intent = new Intent(getActivity(), LoginActivity.class);
+                    startActivity(intent);
+                }
+
                 break;
         }
     }

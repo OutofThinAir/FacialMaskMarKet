@@ -8,7 +8,7 @@
        android:layout_height="35dp"
        >
        <ImageView
-           android:id="@+id/classify_minute_image"
+           android:id="@+id/classify_minute_last"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:src="@mipmap/last_pic"

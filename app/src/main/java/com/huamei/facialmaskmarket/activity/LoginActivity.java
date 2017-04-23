@@ -42,6 +42,8 @@ public class LoginActivity extends Activity implements View.OnClickListener{
 
     private EditText into_uanme;
     private EditText into_pwd;
+    private SharedPreferences pre;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +64,10 @@ public class LoginActivity extends Activity implements View.OnClickListener{
         register.setOnClickListener(this);
         login.setOnClickListener(this);
 
+        //获得登录状态
+        pre = getSharedPreferences("cofig",MODE_PRIVATE);
+
+
 
     }
 
@@ -69,6 +75,8 @@ public class LoginActivity extends Activity implements View.OnClickListener{
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.login_pager_last:
+                //返回上一页
+                finish();
                 break;
             case R.id.login_pager_register:
                 //跳转注册界面
@@ -76,12 +84,20 @@ public class LoginActivity extends Activity implements View.OnClickListener{
                 startActivity(intent);
                 break;
             case R.id.login_pager_login_bu:
+
+
+
+
                 if (!TextUtils.isEmpty(into_uanme.getText().toString())&&!TextUtils.isEmpty(into_pwd.getText().toString())){
                     //请求登录的接口
                     logPost(into_uanme.getText().toString(),into_pwd.getText().toString());
-                }else{
-                    Toast.makeText(this, "用户名密码不能为空", Toast.LENGTH_SHORT).show();
                 }
+               if(TextUtils.isEmpty(into_uanme.getText().toString())&&TextUtils.isEmpty(into_pwd.getText().toString())){
+                   Toast.makeText(this, "用户名或密码不能为空", Toast.LENGTH_SHORT).show();
+               }
+
+
+
 
                 break;
 
@@ -90,7 +106,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
     }
 
     //登录,请求后台
-    private void  logPost(String name,String pwd){
+    private void  logPost(final String name, String pwd){
 
         OkHttpClient okhttp = new OkHttpClient();
         //请求体
@@ -125,9 +141,10 @@ public class LoginActivity extends Activity implements View.OnClickListener{
                                 int uid = 0;
                                 try {
                                     uid = obj.getInt("id");
-                                    SharedPreferences share = getSharedPreferences("cofig",MODE_PRIVATE);
-                                    SharedPreferences.Editor edit = share.edit();
+
+                                    SharedPreferences.Editor edit = pre.edit();
                                     edit.putInt("uid",uid);
+                                    edit.putString("uname",name);
                                     edit.commit();
                                     Log.d("dddddd",uid+"");
                                 } catch (JSONException e) {

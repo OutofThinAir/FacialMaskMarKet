@@ -119,9 +119,7 @@ public class ShopCarAdapter extends BaseAdapter {
         holder.delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                okDelete(list.get(position).getProductID());
-
-                list.remove(list.get(position));
+                okDelete(list.get(position).getProductID(),list,position);
                 notifyDataSetChanged();
 
             }
@@ -160,7 +158,7 @@ public class ShopCarAdapter extends BaseAdapter {
         this.price=p;
     }
 
-private void okDelete(int pid){
+private void okDelete(int pid, final ArrayList<ShopCarBean.CartItemListBean> list, final int position){
     OkHttpClient okHttpClient = new OkHttpClient();
     Request requse = new Request.Builder()
             .url("http://169.254.217.5:8080/bullking1/deletepro?productID="+pid)
@@ -186,6 +184,8 @@ private void okDelete(int pid){
                        public void run() {
                            if (coun!=0){
                                Toast.makeText(a, "删除成功", Toast.LENGTH_SHORT).show();
+                               list.remove(position);
+                               notifyDataSetChanged();
                            }else{
                                Toast.makeText(a, "删除失败", Toast.LENGTH_SHORT).show();
                            }

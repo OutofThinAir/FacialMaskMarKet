@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.view.View;
 import android.widget.ImageView;
 
 import com.google.gson.Gson;
@@ -39,7 +40,7 @@ public class ClassifyMinuteActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.classify_minute_layout);
         //初始化控件
-        ImageView imageView = (ImageView) findViewById(R.id.classify_minute_image);
+        ImageView imageView = (ImageView) findViewById(R.id.classify_minute_last);
         TabLayout tab = (TabLayout) findViewById(R.id.classify_minute_tab);
         ViewPager pager = (ViewPager) findViewById(R.id.classify_minute_pager);
 
@@ -58,6 +59,14 @@ public class ClassifyMinuteActivity extends FragmentActivity {
         MyPagerAdapter adapter = new MyPagerAdapter(getSupportFragmentManager());
         pager.setAdapter(adapter);
         tab.setupWithViewPager(pager);
+
+        //返回上一页
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
     }
 

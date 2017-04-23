@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
            android:text="代付款"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:drawableTop="@mipmap/my_dai_fu_kuai"
             android:gravity="center"/>
         <TextView
@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="代发货"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:drawableTop="@mipmap/my_dai_fa_huo"
             android:gravity="center"/>
         <TextView
@@ -51,7 +51,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="代收货"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:drawableTop="@mipmap/my_dai_shou_huo"
             android:gravity="center"/>
         <TextView
@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="代评价"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:drawableTop="@mipmap/my_dai_ping_jia"
             android:gravity="center"/>
         <TextView
@@ -69,7 +69,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="退款"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:drawableTop="@mipmap/my_tui_kuai"
             android:gravity="center"/>
 

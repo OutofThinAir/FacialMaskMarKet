@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -40,6 +41,8 @@ public class ShoppingFragment extends Fragment {
     private TextView jiesuan;
     public static TextView zongjia;
     private int uid;
+    private ShopCarAdapter adapter;
+
 
     @Nullable
     @Override
@@ -63,10 +66,13 @@ public class ShoppingFragment extends Fragment {
 
     //初始化控件
     private void initView(View view){
+
         listView = (ListView) view.findViewById(R.id.shop_pager_list);
         quanxuan = (CheckBox) view.findViewById(R.id.shop_car_quanxuan);
         jiesuan = (TextView) view.findViewById(R.id.shop_car_jiesuan);
         zongjia = (TextView) view.findViewById(R.id.shop_car_zongja);
+
+
 
 
     }
@@ -94,9 +100,12 @@ public class ShoppingFragment extends Fragment {
                 final ArrayList<ShopCarBean.CartItemListBean> list = (ArrayList<ShopCarBean.CartItemListBean>) bean.getCartItemList();
 
                 getActivity().runOnUiThread(new Runnable() {
+
+
+
                     @Override
                     public void run() {
-                        final ShopCarAdapter adapter = new ShopCarAdapter(getActivity(),list);
+                        adapter = new ShopCarAdapter(getActivity(),list);
                         listView.setAdapter(adapter);
 
 
@@ -146,6 +155,7 @@ public class ShoppingFragment extends Fragment {
         super.onHiddenChanged(hidden);
         if (!hidden){
             selectShopCar(uid);
+
         }
     }
 }

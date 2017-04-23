@@ -6,13 +6,13 @@
     <LinearLayout
         android:id="@+id/line1"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="35dp"
         android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/login_pager_last"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="25dp"
             android:src="@mipmap/last_pic"
             android:layout_gravity="center_horizontal"
             android:layout_marginLeft="5dp"/>
@@ -22,7 +22,7 @@
             android:layout_height="40dp"
             android:layout_weight="1"
             android:text="登录"
-            android:textSize="30sp"
+            android:textSize="20sp"
             android:gravity="center"/>
 
         <TextView
@@ -30,29 +30,11 @@
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:text="注册"
-            android:textSize="30sp"
+            android:textSize="20sp"
             android:gravity="center"
             android:textColor="#DD5044"/>
     </LinearLayout>
 
-    <RelativeLayout
-        android:id="@+id/line2"
-        android:layout_marginTop="60dp"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_below="@+id/line1"
-        android:layout_alignParentStart="true">
-
-        <EditText
-            android:id="@+id/login_pager_into_uanme"
-            android:layout_width="290dp"
-            android:layout_height="match_parent"
-            android:background="@drawable/rv_item_border"
-            android:layout_marginLeft="5dp"
-            android:layout_centerInParent="true"
-            android:hint="请输入用户名"
-            />
-    </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/line3"
@@ -95,5 +77,22 @@
         android:layout_below="@id/login_pager_login_bu"
         android:layout_centerHorizontal="true"/>
 
+    <RelativeLayout
+        android:id="@+id/line2"
+        android:layout_marginTop="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/line1"
+        android:layout_alignParentStart="true">
 
+        <EditText
+            android:id="@+id/login_pager_into_uanme"
+            android:layout_width="290dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/rv_item_border"
+            android:layout_marginLeft="5dp"
+            android:layout_centerInParent="true"
+            android:hint="请输入用户名"
+            />
+    </RelativeLayout>
 </RelativeLayout>
